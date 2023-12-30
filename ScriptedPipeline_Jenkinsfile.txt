@@ -6,7 +6,8 @@ node('slv2') {
     sh 'mvn package'
                                }
     stage('Deploy into the container') {
-    deploy adapters: [tomcat9(credentialsId: '9a4b90b1-2631-4f93-911b-b8591f1f5eb5', path: '', url: 'http://13.232.68.48:8080')], contextPath: '/devapp', war: '**/*.war'
-                                       }
-   
+                                       
+       deploy adapters: [tomcat9(credentialsId: '9a4b90b1-2631-4f93-911b-b8591f1f5eb5', path: '', url: 'http://13.232.68.48:8080')], contextPath: '/devapp', war: '**/*.war'
+
+ }
     }
