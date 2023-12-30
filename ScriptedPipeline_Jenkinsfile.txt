@@ -1,4 +1,4 @@
-node('jenkins-slave') {
+node('slv2') {
     stage('Download') {
     git branch: 'dev', url: 'https://github.com/venkat9822891/my-project-28.git'
                       }
